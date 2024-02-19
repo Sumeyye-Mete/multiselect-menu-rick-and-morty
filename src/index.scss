@@ -14,7 +14,6 @@ $textFont: calc(1rem + 0.3vw);
 	transition: $var 0.4s;
 }
 
-
 /* MAIN STYLES */
 
 body #root {
@@ -33,10 +32,11 @@ body #root {
 	width: 600px;
 	@media (max-width: 767px) {
 		width: 100%;
+		padding: 0 calc(1rem + 0.2vw);
 	}
-	
+
 	/* INPUT SECTION STYLES */
-	
+
 	.multiselect-menu-upper-section {
 		display: flex;
 		justify-content: space-between;
