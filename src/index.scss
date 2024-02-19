@@ -1,0 +1,209 @@
+@import "/node_modules/bootstrap/dist/css/bootstrap.css";
+
+$darkGray: rgb(71, 85, 105);
+$lightGray: rgba(72, 86, 106, 0.5);
+$lightBlue: #e2e8f0;
+$textFont: calc(1rem + 0.3vw);
+
+@mixin flex-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+@mixin transition-effect($var) {
+	transition: $var 0.4s;
+}
+
+
+/* MAIN STYLES */
+
+body #root {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: $darkGray;
+}
+
+.main-section {
+	height: 75vh;
+	width: 600px;
+	@media (max-width: 767px) {
+		width: 100%;
+	}
+	
+	/* INPUT SECTION STYLES */
+	
+	.multiselect-menu-upper-section {
+		display: flex;
+		justify-content: space-between;
+		gap: 1rem;
+		padding: 0.5rem;
+		border: 2px solid $lightGray;
+		border-radius: 1rem;
+		box-shadow: 0 0 10px rgb(199, 199, 199);
+
+		.selected-items {
+			max-width: 60%;
+			overflow: scroll;
+			display: flex;
+			align-items: center;
+			gap: 0.5rem;
+			padding: 0.5rem 0;
+
+			.selected-item {
+				background-color: $lightBlue;
+				border-radius: 0.5rem;
+				display: flex;
+				align-items: center;
+				gap: 0.5rem;
+				padding: 0.5rem;
+
+				span {
+					white-space: nowrap;
+				}
+
+				button.deleteItem {
+					color: white;
+					border: none;
+					background-color: $lightGray;
+					border-radius: 5px;
+					width: 1.5rem;
+					height: 1.5rem;
+					padding: 0;
+					@include transition-effect(transform);
+
+					&:hover {
+						transform: scale(1.1);
+					}
+				}
+			}
+		}
+		.input-text {
+			border: none;
+			flex-grow: 1;
+			font-size: $textFont;
+
+			&:focus-visible {
+				outline: none;
+			}
+		}
+		button.open-menu {
+			border: none;
+			background-color: transparent;
+			@include transition-effect(transform);
+
+			&:hover {
+				transform: scale(1.1);
+			}
+			&:focus-visible {
+				outline: 2px solid $lightGray;
+				border-radius: 0.5rem;
+			}
+
+			.arrow {
+				font-size: 2rem;
+				color: $darkGray;
+			}
+		}
+	}
+	/* MULTISELECT MENU SECTION STYLES */
+
+	.multiselect-menu-lower-section {
+		height: 90%;
+		border: 2px solid $lightGray;
+		border-radius: 1rem;
+		position: relative;
+
+		.inner-section {
+			height: 100%;
+			overflow: scroll;
+
+			.error-text {
+				text-align: center;
+				color: #dc3545;
+				padding: 1rem 0;
+			}
+			.spinner {
+				position: absolute;
+				top: 0;
+				left: 0;
+				bottom: 0;
+				right: 0;
+				@include flex-center;
+			}
+			.character-card {
+				display: flex;
+				align-items: center;
+				gap: 1rem;
+				padding: 0.5rem 1rem;
+				border-bottom: 1px solid $lightGray;
+
+				.styled-checkbox {
+					-webkit-appearance: none;
+					-moz-appearance: none;
+					appearance: none;
+					width: 20px;
+					height: 20px;
+					border: 2px solid $darkGray;
+					border-radius: 4px;
+					outline: none;
+					cursor: pointer;
+
+					&:focus-visible + label {
+						img {
+							border: 2px solid $darkGray;
+						}
+						p {
+							font-weight: 600;
+						}
+					}
+
+					&:checked {
+						background-color: #007bff;
+						border: 2px solid #007bff;
+						position: relative;
+
+						&:before {
+							content: "\2713";
+							font-size: 14px;
+							color: #fff;
+							position: absolute;
+							top: 50%;
+							left: 50%;
+							transform: translate(-50%, -50%);
+						}
+					}
+				}
+
+				label {
+					height: 75px;
+					flex-grow: 1;
+					display: flex;
+					align-items: center;
+					gap: 0.5rem;
+					cursor: pointer;
+
+					img {
+						height: 75%;
+						-webkit-aspect-ratio: 1;
+						aspect-ratio: 1;
+						border-radius: 1rem;
+					}
+
+					p {
+						font-size: $textFont;
+						margin: 0;
+						text-transform: capitalize;
+					}
+				}
+			}
+		}
+	}
+	.invisible {
+		visibility: hidden;
+	}
+}
