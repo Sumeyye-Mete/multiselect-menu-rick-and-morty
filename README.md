@@ -1,7 +1,7 @@
 # Multiselect Menu
 
 Welcome to the frontend showcase, where I've utilized React, Typescript, a REST API, and SCSS to craft a responsive and interactive multiselect component.<br/> 
-Within this menu, you can experience an infinite scroll effect as you navigate using the arrow keys and tab on your keyboard.
+Within this menu, you can experience an infinite scroll effect in menu options section. You can navigate using the arrow keys and tab on your keyboard.
 
 ## Screenshots
 
