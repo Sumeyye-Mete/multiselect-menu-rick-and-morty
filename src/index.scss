@@ -54,6 +54,11 @@ body #root {
 			gap: 0.5rem;
 			padding: 0.5rem 0;
 
+			@media (max-width: 767px) {
+				max-width: 100%;
+				padding: 0;
+			}
+
 			.selected-item {
 				background-color: $lightBlue;
 				border-radius: 0.5rem;

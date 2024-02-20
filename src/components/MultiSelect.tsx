@@ -99,7 +99,7 @@ const MultiSelect = () => {
 
 	return (
 		<>
-			<div className="multiselect-menu-upper-section">
+			<div className="multiselect-menu-upper-section d-block d-md-flex">
 				<div className="selected-items">
 					{selectedItems.map((item, index) => {
 						return (
@@ -115,20 +115,22 @@ const MultiSelect = () => {
 						);
 					})}
 				</div>
-				<input
-					ref={mainInputRef}
-					type="text"
-					className="input-text"
-					value={filter}
-					onChange={(e) => handleInput(e)}
-				/>
-				<button className="open-menu" onClick={handleToggleMenu}>
-					{openMenu ? (
-						<FaCaretUp className="arrow" />
-					) : (
-						<FaCaretDown className="arrow" />
-					)}
-				</button>
+				<div className="d-flex justify-content-between flex-grow-1">
+					<input
+						ref={mainInputRef}
+						type="text"
+						className="input-text"
+						value={filter}
+						onChange={(e) => handleInput(e)}
+					/>
+					<button className="open-menu" onClick={handleToggleMenu}>
+						{openMenu ? (
+							<FaCaretUp className="arrow" />
+						) : (
+							<FaCaretDown className="arrow" />
+						)}
+					</button>
+				</div>
 			</div>
 			<div
 				className={` multiselect-menu-lower-section 
