@@ -7,7 +7,7 @@ Within this menu, you can experience an infinite scroll effect in menu options s
 
 Here are a couple of screenshots and a video from my project:
 
-<img height="400px" width="auto" alt="ss-phone" src="https://github.com/Sumeyye-Mete/multiselect-menu-rick-and-morty/assets/143296901/dd412b41-492e-428b-a3e4-36b0438f7752">  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp; 
+<img height="400px" width="auto" alt="ss-phone" src="https://github.com/Sumeyye-Mete/multiselect-menu-rick-and-morty/assets/143296901/dd412b41-492e-428b-a3e4-36b0438f7752">  
 <img height="400px" width="auto" alt="ss-desktop" src="https://github.com/Sumeyye-Mete/multiselect-menu-rick-and-morty/assets/143296901/113bf117-df4c-460e-a239-1ab4ecdd2168">
 
 https://github.com/Sumeyye-Mete/multiselect-menu-rick-and-morty/assets/143296901/bc8a9f11-436e-476f-a9b4-6cc3eb3efde1
